@@ -1,0 +1,18 @@
+<UploadFilesStep
+  checked={pageStatus[currentStep].checked}
+  onChange={({ detail: checked }) => handleCheckboxStatus(checked, currentStep)}
+  title="Upload Dictionary and Spec Files"
+  links={[
+    {
+      label: "Link to GCS Location",
+      link: STEP_CONTENT.metadataljploadUrl,
+      context: "Please upload dictionary and spec file here.",
+    },
+  ]}
+>
+  <WppTypography type="l-body">
+    <small style={{ margin: '0', display: 'inline-block' }}>
+      <strong>Note:</strong> Make sure you have only 1 SPEC file and 1 DIC file at this location. If you see any additional files please delete existing files.
+    </small>
+  </WppTypography>
+</UploadFilesStep>
